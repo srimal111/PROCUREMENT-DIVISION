@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahaweli Authority Landing Page</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(45deg, #8e44ad, #2980b9);
+            color: #fff;
+        }
+
+        header {
+           
+            text-align: center;
+        }
+
+        section {
+          
+            text-align: center;
+        }
+
+        .card_one {
+            background: #cfffd5;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 300px;
+            margin: auto;
+            text-align: left;
+        }
+        .card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 300px;
+            margin: auto;
+            text-align: left;
+        }
+
+        button {
+           border-radius: 15px;
+           background-color: #8e44ad;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background 0.5s ease;
+            width:100%;
+        }
+        h3,p,h2{
+        color: black;
+      
+        }
+    </style>
+</head>
+<body>
+
+    <section>
+        <h1>PROCUREMENT DIVISION</h1>
+        <!-- User Card -->
+
+
+        <div class="card_one">
+            <h2>PROCUREMENT DIVISION</h2>
+            <h2>09 Floor</h2>
+            <p style="color: gray;">office line contact center</p>
+            <p>Fax: <span id="a">None</span></p>
+            <p style="font-weight: bold;">In Com: <span id="a">None</span></p>
+            <p>Call Landline: <span id="a_land_line">011-2687235</span></p>
+            <p>Call Landline: <span id="b_land_line">011-2687484</span></p>
+            <p>Call Mobile: <span id="">None</span></p>
+            <p>Email Line One: <span id="email_one">masldpcsec@gmail.com</span></p>
+            <!-- Buttons -->
+            <button onclick="callNumber('a_land_line')">Call Landline Line 01 </button>
+            <button onclick="callNumber('b_land_line')">Call Landline Line 02</button>
+            <button onclick="openEmailApp_one()">Send Email</button>
+ 
+
+            <script>
+                function openEmailApp_one() {
+                    var email_one = document.getElementById('email_one').textContent;
+                    window.location.href = 'mailto:' + email_one;
+                }
+
+                function callNumber(number, isMobile = false) {
+                    var prefix = isMobile ? 'tel:' : 'tel:';
+                    window.location.href = prefix + document.getElementById(number).textContent;
+                }
+            </script>
+        </div>
+        <hr>
+
+
+        <div class="card">
+            <h2>Eng. H.M.J.T. Wijayawardhana</h2>
+            <p style="color: gray;">Designation: Assistant Director</p>
+            <p>Fax: <span id="">None</span></p>
+            <p style="font-weight: bold;">In Com: <span id="a">268</span></p>
+            <p>Call Landline Line one: <span id="ad_land_line_one">011-2687235</span></p>
+            <p>Call Mobile: <span id="ad_mobile_line">071-4264957</span></p>
+
+            <!-- Buttons -->
+            <button onclick="callNumber('ad_land_line_one')">Call Landline 01</button>
+            <button onclick="callNumber('ad_mobile_line', true)">Call Mobile</button>
+
+            <script>
+                function callNumber(number, isMobile = false) {
+                    var prefix = isMobile ? 'tel:' : 'tel:';
+                    window.location.href = prefix + document.getElementById(number).textContent;
+                }
+            </script>
+        </div>
+        <hr>
+
+
+        
+        <div class="card">
+            <h2>Ms. Deepthi Pattividana</h2>
+            <p style="color: gray;">Designation: Draughts person</p>
+            <p>Fax: <span id="">None</span></p>
+            <p style="font-weight: bold;">In Com: <span id="a">263</span></p>
+            <p>Call Landline Line one: <span id="dp_land_line_one">011-2687484</span></p>
+            <p>Call Mobile: <span id="dp_mobile_line">071-8297066</span></p>
+
+            <!-- Buttons -->
+            <button onclick="callNumber('dp_land_line_one')">Call Landline 01</button>
+            <button onclick="callNumber('dp_mobile_line', true)">Call Mobile</button>
+
+            <script>
+                function callNumber(number, isMobile = false) {
+                    var prefix = isMobile ? 'tel:' : 'tel:';
+                    window.location.href = prefix + document.getElementById(number).textContent;
+                }
+            </script>
+        </div>
+        <hr>
+
+
+          
+        <div class="card">
+            <h2>Mrs. N.H.N.Srimali</h2>
+            <p style="color: gray;">Designation: Engineering Assistant</p>
+            <p>Fax: <span id="">None</span></p>
+            <p style="font-weight: bold;">In Com: <span id="a">255</span></p>
+            <p>Call Landline Line one: <span id="ea_land_line_one">011-2687484</span></p>
+            <p>Call Mobile: <span id="ea_mobile_line">071-5125605</span></p>
+
+            <!-- Buttons -->
+            <button onclick="callNumber('ea_land_line_one')">Call Landline 01</button>
+            <button onclick="callNumber('ea_mobile_line', true)">Call Mobile</button>
+
+            <script>
+                function callNumber(number, isMobile = false) {
+                    var prefix = isMobile ? 'tel:' : 'tel:';
+                    window.location.href = prefix + document.getElementById(number).textContent;
+                }
+            </script>
+        </div>
+        <hr>
+
+
+
+        <!-- More content goes here -->
+        <footer>
+            <p style="color: white;">Developmet & Publish by Department of IT - Sri lanka Mahaweli Aithority </p>
+        </footer>
+    </section>
+</body>
+</html>
